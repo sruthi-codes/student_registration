@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Hub - Registration & Result Portal</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-mortarboard-fill"></i>
+                Student Hub
+            </a>
+
+            <button id="themeButton" class="btn theme-btn">
+
+                <i id="themeIcon" class="bi bi-moon-fill"></i>
+
+                <span id="themeText">Dark Mode</span>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="container text-center">
+
+            <div class="hero-icon">
+                <i class="bi bi-person-badge-fill"></i>
+            </div>
+
+            <h1>Student Registration & Result Portal</h1>
+
+            <p>
+                Register your details, enter marks and discover your result
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <div class="container my-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-10">
+
+                <!-- ================= REGISTRATION ================= -->
+
+                <div class="main-card">
+
+                    <div class="card-title-section">
+
+                        <h3>
+                            <i class="bi bi-person-plus-fill"></i>
+                            Student Registration
+                        </h3>
+
+                        <p>
+                            Enter your personal information and academic marks
+                        </p>
+
+                    </div>
+
+
+                    <form id="studentForm">
+
+                        <!-- PERSONAL DETAILS -->
+
+                        <h5 class="section-title">
+
+                            <i class="bi bi-person-vcard"></i>
+
+                            Personal Information
+
+                        </h5>
+
+
+                        <div class="row">
+
+                            <!-- NAME -->
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Student Name
+                                </label>
+
+                                <input type="text"
+                                    class="form-control"
+                                    id="studentName"
+                                    placeholder="Enter your name">
+
+                                <div class="invalid-feedback">
+                                    Please enter your name.
+                                </div>
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Email
+                                </label>
+
+                                <input type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="example@gmail.com">
+
+                                <div class="invalid-feedback">
+                                    Please enter a valid email.
+                                </div>
+
+                            </div>
+
+
+                            <!-- PHONE -->
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Phone Number
+                                </label>
+
+                                <input type="tel"
+                                    class="form-control"
+                                    id="phone"
+                                    maxlength="10"
+                                    placeholder="10-digit number">
+
+                                <div class="invalid-feedback">
+                                    Enter a valid 10-digit number.
+                                </div>
+
+                            </div>
+
+
+                            <!-- DOB -->
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Date of Birth
+                                </label>
+
+                                <input type="date"
+                                    class="form-control"
+                                    id="dob">
+
+                                <div class="invalid-feedback">
+                                    Please select your date of birth.
+                                </div>
+
+                            </div>
+
+
+                            <!-- GENDER -->
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Gender
+                                </label>
+
+                                <select class="form-select" id="gender">
+
+                                    <option value="">
+                                        Select Gender
+                                    </option>
+
+                                    <option value="Male">
+                                        Male
+                                    </option>
+
+                                    <option value="Female">
+                                        Female
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                                <div class="invalid-feedback">
+                                    Please select gender.
+                                </div>
+
+                            </div>
+
+
+                            <!-- COURSE -->
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Course
+                                </label>
+
+                                <select class="form-select" id="course">
+
+                                    <option value="">
+                                        Select Course
+                                    </option>
+
+                                    <option>B.Tech</option>
+
+                                    <option>B.Sc</option>
+
+                                    <option>BCA</option>
+
+                                    <option>MCA</option>
+
+                                    <option>MBA</option>
+
+                                </select>
+
+                                <div class="invalid-feedback">
+                                    Please select a course.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= MARKS ================= -->
+
+                        <h5 class="section-title mt-3">
+
+                            <i class="bi bi-bar-chart-fill"></i>
+
+                            Subject Performance
+
+                        </h5>
+
+                        <p class="marks-info">
+                            Enter marks between 0 and 100.
+                        </p>
+
+
+                        <div class="row">
+
+                            <!-- HTML -->
+
+                            <div class="col-md-4 mb-4">
+
+                                <div class="subject-card">
+
+                                    <i class="bi bi-filetype-html"></i>
+
+                                    <label>HTML5</label>
+
+                                    <input type="number"
+                                        id="htmlMarks"
+                                        class="form-control"
+                                        min="0"
+                                        max="100"
+                                        placeholder="Marks">
+
+                                    <div class="invalid-feedback">
+                                        Enter marks between 0 and 100.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- BOOTSTRAP -->
+
+                            <div class="col-md-4 mb-4">
+
+                                <div class="subject-card">
+
+                                    <i class="bi bi-bootstrap"></i>
+
+                                    <label>Bootstrap</label>
+
+                                    <input type="number"
+                                        id="bootstrapMarks"
+                                        class="form-control"
+                                        min="0"
+                                        max="100"
+                                        placeholder="Marks">
+
+                                    <div class="invalid-feedback">
+                                        Enter marks between 0 and 100.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- JAVASCRIPT -->
+
+                            <div class="col-md-4 mb-4">
+
+                                <div class="subject-card">
+
+                                    <i class="bi bi-filetype-js"></i>
+
+                                    <label>JavaScript</label>
+
+                                    <input type="number"
+                                        id="javascriptMarks"
+                                        class="form-control"
+                                        min="0"
+                                        max="100"
+                                        placeholder="Marks">
+
+                                    <div class="invalid-feedback">
+                                        Enter marks between 0 and 100.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- DATABASE -->
+
+                            <div class="col-md-4 mb-4">
+
+                                <div class="subject-card">
+
+                                    <i class="bi bi-database-fill"></i>
+
+                                    <label>Database</label>
+
+                                    <input type="number"
+                                        id="databaseMarks"
+                                        class="form-control"
+                                        min="0"
+                                        max="100"
+                                        placeholder="Marks">
+
+                                    <div class="invalid-feedback">
+                                        Enter marks between 0 and 100.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- JAVA -->
+
+                            <div class="col-md-4 mb-4">
+
+                                <div class="subject-card">
+
+                                    <i class="bi bi-cup-hot-fill"></i>
+
+                                    <label>Java</label>
+
+                                    <input type="number"
+                                        id="javaMarks"
+                                        class="form-control"
+                                        min="0"
+                                        max="100"
+                                        placeholder="Marks">
+
+                                    <div class="invalid-feedback">
+                                        Enter marks between 0 and 100.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- DSA -->
+
+                            <div class="col-md-4 mb-4">
+
+                                <div class="subject-card">
+
+                                    <i class="bi bi-diagram-3-fill"></i>
+
+                                    <label>DSA</label>
+
+                                    <input type="number"
+                                        id="dsaMarks"
+                                        class="form-control"
+                                        min="0"
+                                        max="100"
+                                        placeholder="Marks">
+
+                                    <div class="invalid-feedback">
+                                        Enter marks between 0 and 100.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BUTTONS -->
+
+                        <div class="text-center mt-3">
+
+                            <button type="submit"
+                                class="btn calculate-btn">
+
+                                <i class="bi bi-calculator-fill"></i>
+
+                                Calculate Result
+
+                            </button>
+
+
+                            <button type="reset"
+                                id="resetBtn"
+                                class="btn reset-btn">
+
+                                <i class="bi bi-arrow-clockwise"></i>
+
+                                Reset
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <!-- ================= RESULT ================= -->
+
+                <div id="resultSection"
+                    class="result-card d-none">
+
+                    <div class="result-header">
+
+                        <i class="bi bi-award-fill"></i>
+
+                        <h2>Your Result</h2>
+
+                        <p>
+                            Here is your academic performance
+                        </p>
+
+                    </div>
+
+
+                    <!-- STUDENT DETAILS -->
+
+                    <div class="student-details">
+
+                        <h5>
+                            <i class="bi bi-person-circle"></i>
+                            Student Details
+                        </h5>
+
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <strong>Name:</strong>
+                                <span id="resultName"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <strong>Email:</strong>
+                                <span id="resultEmail"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <strong>Phone:</strong>
+                                <span id="resultPhone"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <strong>DOB:</strong>
+                                <span id="resultDob"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <strong>Gender:</strong>
+                                <span id="resultGender"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <strong>Course:</strong>
+                                <span id="resultCourse"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESULT SUMMARY -->
+
+                    <div class="row result-summary text-center">
+
+                        <!-- TOTAL -->
+
+                        <div class="col-md-4 mb-3">
+
+                            <div class="score-box">
+
+                                <i class="bi bi-calculator"></i>
+
+                                <h6>Total Marks</h6>
+
+                                <h2>
+
+                                    <span id="totalMarks">
+                                    </span>
+
+                                    <small>/ 600</small>
+
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PERCENTAGE -->
+
+                        <div class="col-md-4 mb-3">
+
+                            <div class="score-box">
+
+                                <i class="bi bi-percent"></i>
+
+                                <h6>Percentage</h6>
+
+                                <h2>
+
+                                    <span id="percentage">
+                                    </span>%
+
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- GRADE -->
+
+                        <div class="col-md-4 mb-3">
+
+                            <div class="score-box">
+
+                                <i class="bi bi-trophy-fill"></i>
+
+                                <h6>Grade</h6>
+
+                                <h2 id="grade"></h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROGRESS -->
+
+                    <div class="progress-section">
+
+                        <div class="d-flex justify-content-between">
+
+                            <span>
+                                Overall Performance
+                            </span>
+
+                            <strong>
+                                <span id="progressText">
+                                </span>%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div id="progressBar"
+                                class="progress-bar"
+                                role="progressbar">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STATUS -->
+
+                    <div id="statusBox"
+                        class="status-box">
+
+                        <span id="status"></span>
+
+                    </div>
+
+
+                    <!-- PRINT -->
+
+                    <div class="text-center mt-4">
+
+                        <button onclick="window.print()"
+                            class="btn print-btn">
+
+                            <i class="bi bi-printer-fill"></i>
+
+                            Print Result
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONFETTI -->
+
+    <div id="celebration"></div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            🎓 Student Hub © 2026 | Learn • Grow • Succeed
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

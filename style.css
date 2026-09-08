@@ -1,0 +1,473 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1fdf5;
+    color: #1f2937;
+    transition: 0.3s;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    color: white !important;
+}
+
+.theme-btn {
+    color: white;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 20px;
+    padding: 7px 15px;
+}
+
+.theme-btn:hover {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: linear-gradient(135deg, #4ade80, #16a34a);
+    color: white;
+    padding: 60px 20px;
+}
+
+.hero-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+
+.hero p {
+    opacity: 0.95;
+    font-size: 18px;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.main-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 35px rgba(34,197,94,0.12);
+    transition: 0.3s;
+}
+
+.card-title-section {
+    border-bottom: 1px solid #d1fae5;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.card-title-section h3 {
+    color: #16a34a;
+    font-weight: 700;
+}
+
+.card-title-section p {
+    color: #6b7280;
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    color: #16a34a;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.marks-info {
+    color: #6b7280;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-label {
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #bbf7d0;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34,197,94,0.15);
+}
+
+
+/* =========================
+   SUBJECT CARDS
+========================= */
+
+.subject-card {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 15px;
+    padding: 18px;
+    transition: 0.3s;
+}
+
+.subject-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(34,197,94,0.15);
+}
+
+.subject-card i {
+    font-size: 28px;
+    color: #16a34a;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.subject-card label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.calculate-btn {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.calculate-btn:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(22,163,74,0.25);
+}
+
+.reset-btn {
+    background: #6b7280;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    margin-left: 8px;
+}
+
+.reset-btn:hover {
+    background: #4b5563;
+    color: white;
+}
+
+
+/* =========================
+   RESULT CARD
+========================= */
+
+.result-card {
+    margin-top: 30px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(34,197,94,0.12);
+}
+
+.result-header {
+    text-align: center;
+    color: white;
+    padding: 35px;
+    background: linear-gradient(135deg, #22c55e, #15803d);
+}
+
+.result-header i {
+    font-size: 45px;
+}
+
+.result-header h2 {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   STUDENT DETAILS
+========================= */
+
+.student-details {
+    padding: 30px;
+}
+
+.student-details h5 {
+    color: #16a34a;
+    margin-bottom: 20px;
+}
+
+.student-details .col-md-6 {
+    padding: 10px;
+}
+
+
+/* =========================
+   SCORE BOX
+========================= */
+
+.result-summary {
+    padding: 0 30px;
+}
+
+.score-box {
+    background: #f0fdf4;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid #bbf7d0;
+}
+
+.score-box i {
+    font-size: 30px;
+    color: #16a34a;
+}
+
+.score-box h6 {
+    margin-top: 10px;
+    color: #6b7280;
+}
+
+.score-box h2 {
+    font-weight: 700;
+    color: #15803d;
+}
+
+.score-box small {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-section {
+    padding: 25px 30px;
+}
+
+.progress {
+    height: 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+    background: #dcfce7;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #4ade80, #16a34a);
+    transition: width 1s ease;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-box {
+    margin: 10px 30px;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.status-pass {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-fail {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+
+/* =========================
+   PRINT BUTTON
+========================= */
+
+.print-btn {
+    background: #16a34a;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.print-btn:hover {
+    background: #15803d;
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #14532d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+    position: fixed;
+    width: 8px;
+    height: 14px;
+    top: -20px;
+    z-index: 9999;
+    animation: fall 2.5s linear forwards;
+}
+
+@keyframes fall {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+    background: #0f1f17;
+    color: #f0fdf4;
+}
+
+body.dark-mode .main-card,
+body.dark-mode .result-card {
+    background: #17291f;
+    color: #f0fdf4;
+}
+
+body.dark-mode .card-title-section {
+    border-color: #28543a;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background: #0f1f17;
+    color: white;
+    border-color: #386b4b;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #9ca3af;
+}
+
+body.dark-mode .subject-card,
+body.dark-mode .score-box {
+    background: #0f1f17;
+    border-color: #28543a;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .card-title-section h3 {
+    color: #4ade80;
+}
+
+body.dark-mode .marks-info,
+body.dark-mode .card-title-section p {
+    color: #9ca3af;
+}
+
+body.dark-mode .score-box h2 {
+    color: #4ade80;
+}
+
+body.dark-mode .score-box h6 {
+    color: #9ca3af;
+}
+
+body.dark-mode .student-details h5 {
+    color: #4ade80;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .main-card {
+        padding: 20px;
+    }
+
+    .calculate-btn,
+    .reset-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+}
